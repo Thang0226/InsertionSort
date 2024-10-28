@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class InsertionSortByStep {
 	static int[] list = {2, 3, 2, 5, 6, 1, -2, 3, 14, 12};
 
@@ -23,6 +25,15 @@ public class InsertionSortByStep {
 	}
 
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter list size: ");
+		int size = scanner.nextInt();
+		int[] list = new int[size];
+		System.out.println("Enter " + list.length + " values:");
+		for (int i = 0; i < list.length; i++) {
+			list[i] = scanner.nextInt();
+		}
+
 		System.out.println("List elements:");
 		for (int number : list) {
 			System.out.print(" " + number);
